@@ -1,0 +1,19 @@
+#!/bin/sh
+#
+# hyprland startup applications
+#
+
+killall "flameshot"
+flameshot &
+
+killall "syncthing"
+syncthing >> ~/.local/syncthing &
+
+killall "dunst"
+dunst &
+
+killall ""
+foot --server &
+
+killall "waybar"
+waybar &

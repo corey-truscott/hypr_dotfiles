@@ -1,0 +1,11 @@
+#!/bin/sh
+#
+# hyprland sets
+#
+
+# sets brightness to 100%
+brightnessctl set 100% &
+
+# sets wallpaper
+killall "swaybg"
+swaybg -m fill -i $(ls ~/pics/wallpaper/* | shuf -n 1) &
