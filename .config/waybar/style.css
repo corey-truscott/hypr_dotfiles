@@ -1,52 +1,75 @@
-/* use the below line for opaque waybar */
-/* @import url("../../.cache/wal/colors-waybar.css"); */
-
-/* use the below line for semi-transparent waybar */
 * {
-    border: none;
-    border-radius: 0;
-    font-family: Terminus;
-    font-size: medium;
-    min-height: 0;
+  font-family: 'JetBrainsMono Nerd Font';
+  font-size: 14px;
+  min-height: 0;
 }
+
 window#waybar {
-    background: @background;
-    color: @foreground;
+  /* background: rgba(43, 51, 57, 0.75); */
+  background: #2b3339;
+  color: #d3c6aa;
 }
+
+#workspaces,
+#pulseaudio,
+#clock,
+#tray {
+  padding: 0px 10px;
+  /* background: rgba(60, 68, 73, 0.95); */
+  background: #3c4449;
+}
+
+#workspaces {
+  padding-left: 0px;
+  border-radius: 0px 15px 15px 0px;
+}
+
 #workspaces button {
-    padding: 0 10px;
-    background: transparent;
-    color: @foreground;
+  min-width: 0;
+  color: #d3c6aa;
 }
+
+#workspaces button.active {
+  color: #a7c080;
+}
+
+#workspaces button.urgent {
+  color: #3c4449;
+  background: #a7c080;
+  border-radius: 10px;
+}
+
 #workspaces button:hover {
-    box-shadow: inherit;
-    text-shadow: inherit;
+  background: #3c4449;
+  border-color: #3c4449;
+  border-radius: 10px;
+  color: #a7c080;
 }
-#workspaces button.focused {
-    background: @foreground;
-    color: @background
-}
-#mode, #clock, #xmr, #memory, #temperature.cpu, #temperature.gpu, #pulseaudio, #pulseaudio.muted, #idle_inhibitor {
-    padding: 0 10px;
-    margin: 0 5px;
-    background: transparent;
-    background-color: transparent;
-    color: @foreground;
-}
-#mode {
-}
-#memory {
-}
-#temperature.cpu {
-}
-#temperature.gpu {
-}
+
 #clock {
+  padding-left: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: 0px;
+  margin-left: 10px;
+  border-radius: 15px 0px 0px 15px;
 }
-#idle_inhibitor {
+
+#tray {
+  padding-left: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: 0px;
+  margin-left: 10px;
+  border-radius: 15px 15px 15px 15px;
 }
+
 #pulseaudio {
-}
-#pulseaudio.muted {
+  padding-left: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: 0px;
+  margin-left: 10px;
+  border-radius: 15px 15px 15px 15px;
 }
 

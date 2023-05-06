@@ -1,0 +1,22 @@
+#!/usr/bin/python
+
+import subprocess
+import os
+import time
+
+connected = "Connected"
+attempts = 0
+
+while True:
+    status = subprocess.getoutput("mullvad status | grep -io Connected")
+    print(status)
+    if status == connected:
+        time.sleep(1)
+        os.system("qbittorrent &")
+        exit()
+    else:
+        time.sleep(1)
+        attempts += 1
+        print(attempts)
+        if attempts > 20:
+            exit()

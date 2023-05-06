@@ -17,3 +17,6 @@ foot --server &
 
 killall "waybar"
 waybar &
+
+sleep 1
+pgrep -x qbittorrent > /dev/null || $HOME/.config/hypr/scripts/qbittorrent &

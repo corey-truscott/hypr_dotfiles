@@ -1,0 +1,37 @@
+{
+  "height":	30,
+  "position": "top",
+  "layer":	"top",
+  "modules-left": ["wlr/workspaces"],
+  // "modules-center": ["tray"],
+  "modules-right": [ "tray", "pulseaudio", "date", "clock" ],
+
+  "wlr/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "sort-by-numbers": false,
+    "format-icons": {
+      "default": "󰝦",
+      "active": "󰝥",
+      "urgent": "󰀨"
+    }
+  },
+
+  "pulseaudio": {
+    "format": "<span size='14000' foreground='#a7c080'>{icon} </span>{volume}%",
+    "format-muted": "<span size='14000' foreground='#a7c080'>󰖁</span> Muted",
+    "format-icons": {
+      "default": [ "󰕾" ]
+    }
+  },
+
+  "clock": {
+    "format": "<span size='14000' foreground='#a7c080'> </span>{:%I:%M %p}",
+  },
+
+  "tray": {
+    "spacing": 7
+  }
+}
+
+// vim:ft=jsonc
