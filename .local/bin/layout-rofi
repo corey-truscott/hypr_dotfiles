@@ -1,0 +1,11 @@
+#!/bin/zsh
+# bash or sh just doesnt seem to work with rofi for some reason, i have no idea why
+
+layout=$(echo "dvorak\nqwerty" | rofi -dmenu)
+echo $layout
+
+if [ "$layout" = "dvorak" ]; then
+    ~/.config/hypr/scripts/keylayout --dvorak
+else
+    ~/.config/hypr/scripts/keylayout --qwerty
+fi

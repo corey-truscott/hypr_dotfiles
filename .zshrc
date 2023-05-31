@@ -13,13 +13,11 @@ HISTSIZE=10000000
 SAVEHIST=10000000
 HISTFILE=~/.cache/zsh/history
 
-# change font size
-alias bf="big-font"
-alias sf="small-font"
-
 # some general aliases
+alias manga="zathura --config-dir=$HOME/.config/zathura/alt/"
+alias pt="sudo powertop"
+alias ht="htop"
 alias vi="nvim"
-alias hx="helix"
 alias d="sudo"
 alias doas="sudo"
 alias dvi="sudo nvim"
@@ -35,20 +33,9 @@ alias t="tmux"
 alias tka="tmux kill-session -a"
 alias e="exit"
 
-# window swallowing
-alias i="devour nsxiv -a"
-alias m="devour mpv"
-alias z="devour zathura"
-
 # add colour
-alias ls="exa -lh --color=auto --group-directories-first --icons"
-alias la="exa -lah --color=auto --group-directories-first --icons"
+alias ls="exa -lah --color=auto --group-directories-first --icons"
 alias grep="grep --color=auto"
-alias ccat="highlight --out-format=ansi --force"
-
-# other things
-# alias dmenu='dmenu_run -nb "$color0" -nf "$color15" -sb "$color1" -sf "$color15"'
-# alias dmenu_run='dmenu_run -nb "$color0" -nf "$color15" -sb "$color1" -sf "$color15"'
 
 # Basic auto/tab complete:
 autoload -U compinit
@@ -103,7 +90,6 @@ bindkey '^[[P' delete-char
 
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
-bindkey '^e' 'exit\n'
 
 # pfetch
 pfetch

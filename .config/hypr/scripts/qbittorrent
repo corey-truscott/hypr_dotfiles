@@ -6,8 +6,9 @@ import time
 
 connected = "Connected"
 attempts = 0
+max_attempts = 10
 
-while True:
+while attempts < max_attempts:
     status = subprocess.getoutput("mullvad status | grep -io Connected")
     print(status)
     if status == connected:
@@ -18,5 +19,3 @@ while True:
         time.sleep(1)
         attempts += 1
         print(attempts)
-        if attempts > 20:
-            exit()

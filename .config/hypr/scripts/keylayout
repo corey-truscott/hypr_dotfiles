@@ -1,0 +1,20 @@
+#!/bin/sh
+
+dvorak() {
+    sed -i "s/kb_variant = ,/kb_variant = dvorak/g" ~/.config/hypr/config/input.conf &&
+        echo "layout changed to dvorak"
+}
+
+qwerty() {
+    sed -i "s/kb_variant = dvorak/kb_variant = ,/g" ~/.config/hypr/config/input.conf &&
+        echo "layout changed to qwerty"
+}
+
+if [ "$1" = "--dvorak" ]; then
+  dvorak
+elif [ "$1" = "--qwerty" ]; then
+  # if option --select is passed, run the select function
+  qwerty
+else
+  echo "usage: keylayout [--qwerty | --dvorak]"
+fi

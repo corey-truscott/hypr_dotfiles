@@ -27,6 +27,7 @@
 
   "clock": {
     "format": "<span size='14000' foreground='#a7c080'> </span>{:%I:%M %p}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>",
   },
 
   "tray": {

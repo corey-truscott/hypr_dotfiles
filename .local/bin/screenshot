@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# select an area
+select() {
+  screenshot_location="$HOME/pics/grim/$(date '+%Y-%m-%d_%H-%M-%S')_screenshot.png"
+  grim -g "$(slurp)" $screenshot_location
+  wl-copy < $screenshot_location
+  echo "loction: $screenshot_location"
+}
+
+# whole screen
+whole() {
+  screenshot_location="$HOME/pics/grim/$(date '+%Y-%m-%d_%H-%M-%S')_screenshot.png"
+  grim $screenshot_location
+  wl-copy < $screenshot_location
+  echo "loction: $screenshot_location"
+}
+
+if [ "$1" = "--whole" ]; then
+  # if option --whole is passed, run the whole function
+  whole
+elif [ "$1" = "--select" ]; then
+  # if option --select is passed, run the select function
+  select
+else
+  echo "usage: screenshot [--whole | --select]"
+fi

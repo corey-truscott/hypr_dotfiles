@@ -3,11 +3,8 @@
 # hyprland startup applications
 #
 
-killall "flameshot"
-flameshot &
-
-killall "syncthing"
-syncthing >> ~/.local/syncthing &
+killall "rslsync"
+rslsync
 
 killall "dunst"
 dunst &
@@ -19,4 +16,4 @@ killall "waybar"
 waybar &
 
 sleep 1
-pgrep -x qbittorrent > /dev/null || $HOME/.config/hypr/scripts/qbittorrent &
+pgrep -x qbittorrent || $HOME/.config/hypr/scripts/qbittorrent &
