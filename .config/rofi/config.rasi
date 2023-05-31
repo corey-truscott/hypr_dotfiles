@@ -16,9 +16,9 @@ configuration {
 
   fg: #d3c6aa;
   fg-alt: #d3c6aa;
-
   
-  border: 0;
+  border: 2;
+  border-radius: 10;
   margin: 0;
   padding: 0;
   spacing: 0;
